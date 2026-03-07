@@ -183,34 +183,33 @@
                         transparent 50%
                     );
             }
-            .hero-quote {
-                position: relative;
+            .hero-img-link {
                 z-index: 2;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: var(--black);
+                font-size: clamp(0.8rem, 1.6vw, 1.2rem);
+                background-color: var(--ivory);
+                padding: 10px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition:
+                    background 0.2s,
+                    color 0.2s;
             }
-            .hero-quote-mark {
-                font-family: "Playfair Display", serif;
-                font-size: 5rem;
-                line-height: 0.5;
-                color: var(--gold);
-                display: block;
-                margin-bottom: 1.5rem;
+            .hero-img-link:hover {
+                background-color: var(--gold);
+                color: var(--black);
             }
-            .hero-quote p {
-                font-family: "Cormorant Garamond", serif;
-                font-size: clamp(1.3rem, 2.2vw, 1.9rem);
-                font-weight: 300;
-                font-style: italic;
-                line-height: 1.55;
-                color: var(--ivory);
-                margin-bottom: 1.5rem;
+            .hero-img-link .arrow {
+                display: inline-block;
+                transition: transform 0.2s;
             }
-            .hero-quote cite {
-                font-family: "EB Garamond", serif;
-                font-size: 0.78rem;
-                letter-spacing: 0.15em;
-                text-transform: uppercase;
-                color: var(--gold);
-                font-style: normal;
+            .hero-img-link:hover .arrow {
+                transform: translateX(3px);
             }
 
             /* ── SECTION STRUCTURE ── */
@@ -255,16 +254,24 @@
                 gap: 5rem;
                 align-items: start;
             }
+            .about-grid h2 {
+                font-size: clamp(1.4rem, 2.5vw, 2rem);
+                line-height: 1.4;
+            }
+            .about-grid h2 em {
+                display: block;
+                font-style: normal;
+                font-size: 0.75em;
+                color: var(--mid);
+                margin-top: 0.75rem;
+                font-weight: 400;
+            }
             .about-body p {
                 font-size: 1.15rem;
                 line-height: 1.8;
                 color: var(--black);
                 margin-bottom: 1.5rem;
                 max-width: 60ch;
-            }
-            .about-body p + p {
-                color: var(--mid);
-                font-size: 1.05rem;
             }
 
             /* ── SCHEDULE ── */
@@ -464,7 +471,7 @@
                     border-bottom: 1px solid var(--rule);
                 }
                 .hero-right {
-                    min-height: 60vw;
+                    min-height: 80vw;
                     padding: 3rem 1.5rem;
                 }
                 .about-grid {
@@ -519,18 +526,23 @@
                     </div>
                     <div class="hero-meta-item">
                         <label>Ends</label>
-                        <p>Late evening</p>
+                        <p>8:00 PM</p>
                     </div>
                 </div>
             </div>
 
             <div class="hero-right">
-                <img src="giussani_preaching.webp" alt="Luigi Giussani" />
-                <!--<div class="hero-quote">
-                    <span class="hero-quote-mark">"</span>
-                    <p>What are you looking for?</p>
-                    <cite>— Luigi Giussani</cite>
-                </div>-->
+                <img
+                    src="nigerian_transfiguration.jpeg"
+                    alt="Raffaello Sanzio, The Transfiguration"
+                />
+                <a
+                    class="hero-img-link"
+                    href="https://www.artway.eu/posts/augustin-kolawole-olayinka-the-transfiguration"
+                    target="_blank"
+                >
+                    Learn more about the painting <span class="arrow">→</span>
+                </a>
             </div>
         </div>
 
@@ -539,23 +551,29 @@
             <div class="section-label">About the Event</div>
             <div class="about-grid">
                 <h2>
-                    A day for the<br />questions that<br /><em>matter most</em>
+                    "Lord, it is good that we are here"
+                    <em>— Peter to Jesus<br />on the mountaintop</em>
                 </h2>
                 <div class="about-body fade-up">
                     <p>
-                        The Des Moines Meeting is a gathering of people who
-                        believe that reality has something to say — and that
-                        encountering it together, openly and seriously, changes
-                        us. It is Catholic in origin, but built for anyone
-                        willing to look at the questions of culture, faith,
-                        work, beauty, and what it means to be human in this
-                        moment.
+                        At a moment of encounter with something extraordinary
+                        and fulfilling, Peter said what came most naturally to
+                        him, and he desired the moment to last. We, too, desire
+                        these moments where we are struck by what is truly good
+                        and beautiful.
                     </p>
                     <p>
-                        From panel discussions to Mass at the Cathedral, from
-                        lunch to a concert and an evening together — the day is
-                        designed not just to inform, but to propose. Come
-                        curious. Leave moved.
+                        Join us for a time of encounter at the Des Moines
+                        Meeting. Hear the witness of people who spent time with
+                        a man on the path to sainthood. Engage questions about
+                        what it means to be human in a digital age. Listen to
+                        music performed by talented artists. Experience a
+                        cultural event with people whose lives have been shaped
+                        by an encounter with God.
+                    </p>
+                    <p>
+                        This event is free and for everyone. Welcome! It is good
+                        that we are here.
                     </p>
                 </div>
             </div>
