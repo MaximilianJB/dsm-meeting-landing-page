@@ -443,6 +443,85 @@
                 border-color: var(--gold);
             }
 
+            /* ── PANELS & SPEAKERS ── */
+            .panels-section {
+                background: var(--warm-white);
+            }
+            .panels-inner {
+                max-width: 1100px;
+            }
+            .panel-block {
+                padding: 3rem 0;
+                border-bottom: 1px solid var(--rule);
+            }
+            .panel-block:last-child {
+                border-bottom: none;
+            }
+            .panel-title {
+                font-family: "Playfair Display", serif;
+                font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+                font-weight: 700;
+                color: var(--black);
+                margin-bottom: 0.5rem;
+                line-height: 1.2;
+            }
+            .panel-description {
+                font-family: "EB Garamond", serif;
+                font-size: 1.1rem;
+                color: var(--mid);
+                max-width: 680px;
+                margin-bottom: 2.5rem;
+                line-height: 1.7;
+            }
+            .panel-people {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+            .person-card {
+                display: flex;
+                gap: 1.25rem;
+                align-items: flex-start;
+            }
+            .person-photo {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                flex-shrink: 0;
+                border: 1px solid var(--rule);
+                background: var(--ivory);
+            }
+            .person-info {
+                flex: 1;
+            }
+            .person-role {
+                display: block;
+                font-family: "EB Garamond", serif;
+                font-size: 0.68rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--gold);
+                margin-bottom: 0.2rem;
+            }
+            .person-name {
+                font-family: "Playfair Display", serif;
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--black);
+                margin-bottom: 0.4rem;
+                line-height: 1.2;
+            }
+            .person-card--moderator .person-name {
+                color: var(--gold);
+            }
+            .person-bio {
+                font-family: "EB Garamond", serif;
+                font-size: 0.95rem;
+                color: var(--mid);
+                line-height: 1.6;
+            }
+
             /* ── ANIMATIONS ── */
             .fade-up {
                 opacity: 0;
@@ -480,6 +559,9 @@
                 }
                 section {
                     padding: 3rem 1.5rem;
+                }
+                .panel-people {
+                    grid-template-columns: 1fr;
                 }
                 footer {
                     flex-direction: column;
@@ -575,6 +657,284 @@
                         This event is free and for everyone. Welcome! It is good
                         that we are here.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANELS & SPEAKERS -->
+        <section class="panels-section" id="panels">
+            <div class="section-label">Panels &amp; Speakers</div>
+            <h2>Who we'll <em>hear from</em></h2>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 PANEL 1: THE GIUSSANI PANEL
+                 Replace title, description, and all person data below.
+                 Photo files go in the photos/ folder.
+                 ═══════════════════════════════════════════════════════ -->
+            <div class="panel-block fade-up">
+                <h3 class="panel-title">The Giussani Panel</h3>
+                <p class="panel-description">
+                    Who was Luigi Giussani — priest, educator, and founder of
+                    Communion and Liberation — and why does his question "what
+                    are you looking for?" feel urgent now? A panel with people
+                    who knew him personally.
+                </p>
+                <div class="panel-people">
+                    <!-- MODERATOR -->
+                    <div class="person-card person-card--moderator">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Moderator Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Moderator</span>
+                            <h4 class="person-name">Moderator Name</h4>
+                            <p class="person-bio">
+                                Short bio for the moderator goes here. Replace
+                                with the actual text provided.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 1 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here. Replace
+                                with the actual text provided.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 2 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here. Replace
+                                with the actual text provided.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 3 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here. Replace
+                                with the actual text provided.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 PANEL 2
+                 Replace title, description, and all person data below.
+                 ═══════════════════════════════════════════════════════ -->
+            <div class="panel-block fade-up">
+                <h3 class="panel-title">Panel Two Title</h3>
+                <p class="panel-description">
+                    Description of the second panel discussion. Replace this
+                    with the finalized text for this session.
+                </p>
+                <div class="panel-people">
+                    <!-- MODERATOR -->
+                    <div class="person-card person-card--moderator">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Moderator Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Moderator</span>
+                            <h4 class="person-name">Moderator Name</h4>
+                            <p class="person-bio">
+                                Short bio for the moderator goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 1 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 2 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 3 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 4 (optional — remove if only 3) -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 PANEL 3
+                 Replace title, description, and all person data below.
+                 ═══════════════════════════════════════════════════════ -->
+            <div class="panel-block fade-up">
+                <h3 class="panel-title">Panel Three Title</h3>
+                <p class="panel-description">
+                    Description of the third panel discussion. Replace this
+                    with the finalized text for this session.
+                </p>
+                <div class="panel-people">
+                    <!-- MODERATOR -->
+                    <div class="person-card person-card--moderator">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Moderator Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Moderator</span>
+                            <h4 class="person-name">Moderator Name</h4>
+                            <p class="person-bio">
+                                Short bio for the moderator goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 1 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 2 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- PANELIST 3 -->
+                    <div class="person-card">
+                        <img
+                            src="photos/placeholder.jpg"
+                            alt="Panelist Name"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Panelist</span>
+                            <h4 class="person-name">Panelist Name</h4>
+                            <p class="person-bio">
+                                Short bio for this panelist goes here.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 CONCERT PERFORMER
+                 ═══════════════════════════════════════════════════════ -->
+            <div class="panel-block fade-up">
+                <h3 class="panel-title">Evening Piano Concert</h3>
+                <p class="panel-description">
+                    Close the day with an evening of live piano. A moment of
+                    beauty to end a day of encounter.
+                </p>
+                <div class="panel-people">
+                    <div class="person-card">
+                        <img
+                            src="photos/brian-billion.jpg"
+                            alt="Brian Billion"
+                            class="person-photo"
+                        />
+                        <div class="person-info">
+                            <span class="person-role">Performer</span>
+                            <h4 class="person-name">Brian Billion</h4>
+                            <p class="person-bio">
+                                Short bio for Brian goes here. Replace with the
+                                actual text provided.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
