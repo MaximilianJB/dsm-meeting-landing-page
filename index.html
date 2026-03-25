@@ -476,24 +476,31 @@
             .panel-people {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 2rem;
+                gap: 0;
+                border: 1px solid var(--rule);
+                margin-top: 0.5rem;
             }
             .person-card {
                 display: flex;
-                gap: 1.25rem;
-                align-items: flex-start;
+                flex-direction: column;
+                border-right: 1px solid var(--rule);
+                border-bottom: 1px solid var(--rule);
+                transition: background 0.2s;
+            }
+            .person-card:hover {
+                background: var(--ivory);
             }
             .person-photo {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
+                width: 100%;
+                aspect-ratio: 1 / 1;
                 object-fit: cover;
-                flex-shrink: 0;
-                border: 1px solid var(--rule);
+                display: block;
+                border-bottom: 1px solid var(--rule);
                 background: var(--ivory);
             }
             .person-info {
                 flex: 1;
+                padding: 1.25rem 1.5rem;
             }
             .person-role {
                 display: block;
@@ -517,7 +524,7 @@
             }
             .person-bio {
                 font-family: "EB Garamond", serif;
-                font-size: 0.95rem;
+                font-size: 0.9rem;
                 color: var(--mid);
                 line-height: 1.6;
             }
@@ -615,7 +622,7 @@
 
             <div class="hero-right">
                 <img
-                    src="nigerian_transfiguration.jpg"
+                    src="photos/nigerian_transfiguration.jpg"
                     alt="Raffaello Sanzio, The Transfiguration"
                 />
                 <a
@@ -663,8 +670,8 @@
 
         <!-- PANELS & SPEAKERS -->
         <section class="panels-section" id="panels">
-            <div class="section-label">Panels &amp; Speakers</div>
-            <h2>Who we'll <em>hear from</em></h2>
+            <div class="section-label">Program</div>
+            <h2>Panels &amp; <em>Speakers</em></h2>
 
             <!-- ═══════════════════════════════════════════════════════
                  PANEL 1: THE GIUSSANI PANEL
@@ -689,102 +696,88 @@
                         />
                         <div class="person-info">
                             <span class="person-role">Moderator</span>
-                            <h4 class="person-name">Moderator Name</h4>
-                            <p class="person-bio">
-                                Short bio for the moderator goes here. Replace
-                                with the actual text provided.
-                            </p>
+                            <h4 class="person-name">TBD</h4>
+                            <p class="person-bio">~</p>
                         </div>
                     </div>
                     <!-- PANELIST 1 -->
                     <div class="person-card">
                         <img
-                            src="photos/placeholder.jpg"
+                            src="https://images.squarespace-cdn.com/content/v1/52c1cc70e4b054ed0b4b884e/9d92bb63-b186-4148-ad5f-77c8cf6e5c3c/Holly-Peterson-rc.jpg"
                             alt="Panelist Name"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here. Replace
-                                with the actual text provided.
-                            </p>
+                            <h4 class="person-name">Holly Peterson</h4>
+                            <p class="person-bio">~</p>
                         </div>
                     </div>
                     <!-- PANELIST 2 -->
                     <div class="person-card">
                         <img
-                            src="photos/placeholder.jpg"
+                            src="https://images.squarespace-cdn.com/content/v1/52c1cc70e4b054ed0b4b884e/1480996015753-AB0KONMEBIRXNCE4I1RI/image-asset.jpeg"
                             alt="Panelist Name"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here. Replace
-                                with the actual text provided.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- PANELIST 3 -->
-                    <div class="person-card">
-                        <img
-                            src="photos/placeholder.jpg"
-                            alt="Panelist Name"
-                            class="person-photo"
-                        />
-                        <div class="person-info">
-                            <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here. Replace
-                                with the actual text provided.
-                            </p>
+                            <h4 class="person-name">Riro Maniscalco</h4>
+                            <p class="person-bio">~</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- ═══════════════════════════════════════════════════════
-                 PANEL 2
+                 GEN Z and Faith
                  Replace title, description, and all person data below.
                  ═══════════════════════════════════════════════════════ -->
             <div class="panel-block fade-up">
-                <h3 class="panel-title">Panel Two Title</h3>
+                <h3 class="panel-title">Gen Z and Faith</h3>
                 <p class="panel-description">
-                    Description of the second panel discussion. Replace this
-                    with the finalized text for this session.
+                    By now everyone knows: the young people born between 1997
+                    and 2012 have lived in a world that has always known the
+                    internet and smartphones. With seemingly endless connection
+                    and the ability to curate an online persona and experiences
+                    that uniquely fit one’s particular interests, is there an
+                    ongoing need for communal worship, for non-virtual
+                    experiences, for God? Young people and their mentors offer
+                    their perspectives.
                 </p>
                 <div class="panel-people">
                     <!-- MODERATOR -->
                     <div class="person-card person-card--moderator">
                         <img
-                            src="photos/placeholder.jpg"
-                            alt="Moderator Name"
+                            src="https://files.ecatholic.com/37828/pictures/2025/1/motta.jpg?t=1737424459000"
+                            alt="Fr. Stefano Motta"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Moderator</span>
-                            <h4 class="person-name">Moderator Name</h4>
-                            <p class="person-bio">
-                                Short bio for the moderator goes here.
-                            </p>
+                            <h4 class="person-name">Fr. Stefano Motta</h4>
+                            <p class="person-bio">~</p>
                         </div>
                     </div>
                     <!-- PANELIST 1 -->
                     <div class="person-card">
                         <img
-                            src="photos/placeholder.jpg"
+                            src="photos/caroline-schultz.jpg"
                             alt="Panelist Name"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
+                            <h4 class="person-name">Caroline Schultz</h4>
                             <p class="person-bio">
-                                Short bio for this panelist goes here.
+                                As a recent graduate of the Missouri School of
+                                Journalism now working in high school ministry,
+                                Caroline's everyday life is entrenched in all
+                                things Gen Z. Her work with Serva Fidem involves
+                                launching a pilot program within the Diocese of
+                                Des Moines to equip public school students with
+                                the resources to sustain their faith beyond
+                                graduation.
                             </p>
                         </div>
                     </div>
@@ -792,118 +785,93 @@
                     <div class="person-card">
                         <img
                             src="photos/placeholder.jpg"
-                            alt="Panelist Name"
+                            alt="Kash Fischer"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- PANELIST 3 -->
-                    <div class="person-card">
-                        <img
-                            src="photos/placeholder.jpg"
-                            alt="Panelist Name"
-                            class="person-photo"
-                        />
-                        <div class="person-info">
-                            <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- PANELIST 4 (optional — remove if only 3) -->
-                    <div class="person-card">
-                        <img
-                            src="photos/placeholder.jpg"
-                            alt="Panelist Name"
-                            class="person-photo"
-                        />
-                        <div class="person-info">
-                            <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here.
-                            </p>
+                            <h4 class="person-name">Kash Fischer</h4>
+                            <p class="person-bio">~</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- ═══════════════════════════════════════════════════════
-                 PANEL 3
+                 The Dignity of Work
                  Replace title, description, and all person data below.
                  ═══════════════════════════════════════════════════════ -->
             <div class="panel-block fade-up">
-                <h3 class="panel-title">Panel Three Title</h3>
+                <h3 class="panel-title">The Dignity of Work</h3>
                 <p class="panel-description">
-                    Description of the third panel discussion. Replace this
-                    with the finalized text for this session.
+                    Much of our life and identity is shaped and determined by
+                    our work. The lack of work can be a disorienting and painful
+                    ordeal. For some, work is a place where leadership and
+                    business acumen is fully expressed. For others, the work of
+                    their hands is its own reward. Work may be seen as a
+                    distraction from a contemplative life, a tool to allow us to
+                    “skip to the good part.” What is the meaning of work when
+                    artificial intelligence has the potential to replace work
+                    previously done by humans? A panel of workers in widely
+                    varied industries offer their perspectives on work and
+                    faithfulness to their religious convictions.
                 </p>
                 <div class="panel-people">
                     <!-- MODERATOR -->
                     <div class="person-card person-card--moderator">
                         <img
-                            src="photos/placeholder.jpg"
+                            src="https://americamagazine.org/wp-content/uploads/2021/12/Beacom-836565-500x500.jpg"
                             alt="Moderator Name"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Moderator</span>
-                            <h4 class="person-name">Moderator Name</h4>
-                            <p class="person-bio">
-                                Short bio for the moderator goes here.
-                            </p>
+                            <h4 class="person-name">Nathan Beacom</h4>
+                            <p class="person-bio">~</p>
                         </div>
                     </div>
                     <!-- PANELIST 1 -->
                     <div class="person-card">
                         <img
-                            src="photos/placeholder.jpg"
+                            src="photos/damien-riehl.jpg"
                             alt="Panelist Name"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
+                            <h4 class="person-name">Damien Riehl</h4>
                             <p class="person-bio">
-                                Short bio for this panelist goes here.
+                                Damien Riehl is a technology lawyer who clerked
+                                for state and federal judges, litigated for 15
+                                years, and helped companies with cybersecurity.
+                                At Clio, Damien and his team combine the
+                                Business of Law and Practice of law, using
+                                Generative AI to extract and generate valuable
+                                insights from a dataset of over one billion
+                                legal documents — worldwide.
                             </p>
                         </div>
                     </div>
                     <!-- PANELIST 2 -->
                     <div class="person-card">
                         <img
-                            src="photos/placeholder.jpg"
+                            src="photos/andrew-gustafson.jpg"
                             alt="Panelist Name"
                             class="person-photo"
                         />
                         <div class="person-info">
                             <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
+                            <h4 class="person-name">Andy Gustafson</h4>
                             <p class="person-bio">
-                                Short bio for this panelist goes here.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- PANELIST 3 -->
-                    <div class="person-card">
-                        <img
-                            src="photos/placeholder.jpg"
-                            alt="Panelist Name"
-                            class="person-photo"
-                        />
-                        <div class="person-info">
-                            <span class="person-role">Panelist</span>
-                            <h4 class="person-name">Panelist Name</h4>
-                            <p class="person-bio">
-                                Short bio for this panelist goes here.
+                                Andy Gustafson is Professor of Business Ethics
+                                and Society at Creighton University where he has
+                                taught for 21 years in the Heider College of
+                                Business. He is interested in the ways faith can
+                                be integrated into our business lives, and even
+                                how business can contribute to and be a part of
+                                our spiritual life. He lives with his wife
+                                Celeste and two kids, Amos (3 1/2) and Vivian
+                                (1).
                             </p>
                         </div>
                     </div>
@@ -922,7 +890,7 @@
                 <div class="panel-people">
                     <div class="person-card">
                         <img
-                            src="photos/brian-billion.jpg"
+                            src="https://static.wixstatic.com/media/fa2625_8f8a739bda694b0dbf4e90b99721a9b9~mv2.jpg/v1/fill/w_280,h_328,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fa2625_8f8a739bda694b0dbf4e90b99721a9b9~mv2.jpg"
                             alt="Brian Billion"
                             class="person-photo"
                         />
@@ -930,8 +898,19 @@
                             <span class="person-role">Performer</span>
                             <h4 class="person-name">Brian Billion</h4>
                             <p class="person-bio">
-                                Short bio for Brian goes here. Replace with the
-                                actual text provided.
+                                Classical pianist and educator Dr. Brian Billion
+                                presents concerts regularly around the US. He
+                                also teaches a thriving piano studio in the Twin
+                                Cities, Minnesota. Dr. Billion holds degrees in
+                                Piano Performance from The Juilliard School,
+                                Catholic University of America, and The
+                                University of Minnesota.</br> In his performances,
+                                Dr. Billion presents both the music of the great
+                                masters, played with musical feeling and
+                                technical brilliance, as well as the spoken
+                                word, elucidating with expertise what he finds
+                                most interesting, relevant, and moving about the
+                                music.
                             </p>
                         </div>
                     </div>
@@ -950,8 +929,8 @@
                 </div>
                 <div class="schedule-item">
                     <p class="schedule-time">11:15 – 12:15</p>
-                    <p class="schedule-title">The Giussani Panel</p>
-                    <p class="schedule-note">With those who knew him</p>
+                    <p class="schedule-title">First Panel</p>
+                    <p class="schedule-note">Those who knew Giussani</p>
                 </div>
                 <div class="schedule-item">
                     <p class="schedule-time">12:15 – 1:00</p>
@@ -960,13 +939,13 @@
                 </div>
                 <div class="schedule-item">
                     <p class="schedule-time">1:00 – 2:00</p>
-                    <p class="schedule-title">Session Two</p>
-                    <p class="schedule-note">Topic to be announced</p>
+                    <p class="schedule-title">Second Panel</p>
+                    <p class="schedule-note">Faith & Gen Z</p>
                 </div>
                 <div class="schedule-item">
                     <p class="schedule-time">2:30 – 3:30</p>
-                    <p class="schedule-title">Session Three</p>
-                    <p class="schedule-note">Topic to be announced</p>
+                    <p class="schedule-title">Third Panel</p>
+                    <p class="schedule-note">The Dignity of Work</p>
                 </div>
                 <div class="schedule-item">
                     <p class="schedule-time">4:00 – 5:00</p>
@@ -980,12 +959,6 @@
                 <div class="schedule-item">
                     <p class="schedule-time">7:00 – 8:00</p>
                     <p class="schedule-title">Piano Concert</p>
-                    <p class="schedule-note">
-                        Performed by
-                        <a href="https://www.brianbillion.com/" target="_blank">
-                            Brian Billion
-                        </a>
-                    </p>
                 </div>
                 <!--<div class="schedule-item">
                     <p class="schedule-time">8:00 onward</p>
@@ -994,72 +967,6 @@
                 </div>-->
             </div>
         </section>
-
-        <!-- SESSIONS -->
-        <!--<section>
-            <div class="section-label">Session Topics</div>
-            <h2>What we'll<br /><em>discuss</em></h2>
-            <p class="sessions-intro">
-                Each session is a proposal, not a lecture — a chance to
-                encounter questions together with people who have lived them.
-            </p>
-            <div class="sessions-list fade-up">
-                <div class="session-card">
-                    <p class="session-number">01</p>
-                    <p class="session-name">The Giussani Exhibit</p>
-                    <p class="session-desc">
-                        Who was Luigi Giussani, and why does his question —
-                        "what are you looking for?" — feel urgent now? A panel
-                        with those who knew him personally.
-                    </p>
-                </div>
-                <div class="session-card">
-                    <p class="session-number">02</p>
-                    <p class="session-name">Faith & Generation Z</p>
-                    <p class="session-desc">
-                        What is it like to be young, Catholic, and alive to
-                        beauty in a disenchanted world? A conversation with and
-                        among young people in Des Moines.
-                    </p>
-                </div>
-                <div class="session-card">
-                    <p class="session-number">03</p>
-                    <p class="session-name">Sacred Architecture</p>
-                    <p class="session-desc">
-                        Why do we build? What do our buildings say about what we
-                        believe? A session on beauty, form, and the Catholic
-                        architectural tradition.
-                    </p>
-                </div>
-                <div class="session-card">
-                    <p class="session-number">04</p>
-                    <p class="session-name">Preserving Our Humanity</p>
-                    <p class="session-desc">
-                        What does it mean to be human in a digital age? On
-                        technology, attention, and the irreducible self that no
-                        algorithm can flatten.
-                    </p>
-                </div>
-                <div class="session-card">
-                    <p class="session-number">05</p>
-                    <p class="session-name">Service & International Politics</p>
-                    <p class="session-desc">
-                        With Ambassador Kenneth Quinn and others: what does
-                        solidarity require of us when the world is fractured and
-                        the poor are far away?
-                    </p>
-                </div>
-                <div class="session-card">
-                    <p class="session-number">06</p>
-                    <p class="session-name">The InterReligious Panel</p>
-                    <p class="session-desc">
-                        Jews, Muslims, Lutherans, Catholics — what do we share
-                        in this city? A conversation about friendship across
-                        difference.
-                    </p>
-                </div>
-            </div>
-        </section>-->
 
         <!-- CTA -->
         <section class="cta-section">
@@ -1073,14 +980,6 @@
                 >Register Your Interest</a
             >
         </section>
-
-        <!-- FOOTER -->
-        <!--<footer>
-            <span>The Des Moines Meeting</span>
-            <span>
-                <a href="http://desmoinesmeeting.com">desmoinesmeeting.com</a>
-            </span>
-        </footer>-->
 
         <script>
             const observer = new IntersectionObserver(
