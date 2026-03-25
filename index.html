@@ -475,24 +475,31 @@
             }
             .panel-people {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 2rem;
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 0;
+                border: 1px solid var(--rule);
             }
             .person-card {
                 display: flex;
-                gap: 1.25rem;
-                align-items: flex-start;
+                flex-direction: column;
+                border-right: 1px solid var(--rule);
+                border-bottom: 1px solid var(--rule);
+                transition: background 0.2s;
+            }
+            .person-card:hover {
+                background: var(--ivory);
             }
             .person-photo {
-                width: 80px;
-                height: 80px;
-
+                width: 100%;
+                aspect-ratio: 1 / 1;
                 object-fit: cover;
-                flex-shrink: 0;
-                border: 1px solid var(--rule);
+                object-position: center top;
+                display: block;
+                border-bottom: 1px solid var(--rule);
                 background: var(--ivory);
             }
             .person-info {
+                padding: 1.5rem;
                 flex: 1;
             }
             .person-role {
