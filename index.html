@@ -72,6 +72,50 @@
                 color: var(--gold);
             }
 
+            /* ── ATTENDANCE BANNER ── */
+            .attendance-banner {
+                background: var(--ivory);
+                border-bottom: 1px solid var(--rule);
+                padding: 0.65rem 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.25rem;
+                flex-wrap: wrap;
+            }
+            .attendance-banner p {
+                font-family: "EB Garamond", serif;
+                font-size: 0.92rem;
+                color: var(--mid);
+            }
+            .attendance-banner p strong {
+                color: var(--black);
+                font-weight: 500;
+            }
+            .attendance-banner-btn {
+                display: inline-block;
+                padding: 0.35rem 1.1rem;
+                border: 1px solid var(--gold);
+                color: var(--gold);
+                font-family: "EB Garamond", serif;
+                font-size: 0.78rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                text-decoration: none;
+                white-space: nowrap;
+                transition: background 0.2s, color 0.2s;
+            }
+            .attendance-banner-btn:hover {
+                background: var(--gold);
+                color: var(--black);
+            }
+            @media (max-width: 768px) {
+                .attendance-banner {
+                    padding: 0.65rem 1.5rem;
+                    text-align: center;
+                }
+            }
+
             /* ── HERO ── */
             .hero {
                 display: grid;
@@ -643,6 +687,12 @@
             </div>
         </div>
 
+        <!-- ATTENDANCE BANNER -->
+        <div class="attendance-banner">
+            <p>Free &amp; open to all.</p>
+            <a href="https://tally.so/r/MeA0PE" target="_blank" class="attendance-banner-btn">Please RSVP</a>
+        </div>
+
         <!-- ABOUT -->
         <section>
             <div class="section-label">About the Event</div>
@@ -970,7 +1020,7 @@
                 hungers for something more.<br />For our planning purposes, please tell us if you can come.
             </p>
             <a href="https://tally.so/r/MeA0PE" target="_blank" class="cta-btn"
-                >Note your interest</a
+                >Note your attendance</a
             >
         </section>
 
