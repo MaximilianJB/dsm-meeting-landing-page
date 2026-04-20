@@ -109,9 +109,30 @@
                 background: var(--gold);
                 color: var(--black);
             }
+            .masthead-contact-btn {
+                display: inline-block;
+                padding: 0.35rem 1.1rem;
+                border: 1px solid var(--gold);
+                color: var(--gold);
+                font-family: "EB Garamond", serif;
+                font-size: 0.78rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                text-decoration: none;
+                white-space: nowrap;
+                transition: background 0.2s, color 0.2s;
+            }
+            .masthead-contact-btn:hover {
+                background: var(--gold);
+                color: var(--black);
+            }
             @media (max-width: 768px) {
                 .attendance-banner {
                     padding: 0.65rem 1.5rem;
+                    text-align: center;
+                }
+                .attendance-banner p {
+                    width: 100%;
                     text-align: center;
                 }
             }
@@ -363,6 +384,14 @@
                 color: var(--mid);
                 font-style: italic;
             }
+            .schedule-note-intro {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.05rem;
+                font-style: italic;
+                color: var(--mid);
+                margin-top: 0.5rem;
+                margin-bottom: 0;
+            }
 
             /* ── SESSIONS ── */
             .sessions-intro {
@@ -471,6 +500,22 @@
             .cta-btn:hover {
                 background: var(--gold-light);
                 transform: translateY(-1px);
+            }
+            .cta-btn-tertiary {
+                display: block;
+                margin-top: 1.25rem;
+                color: rgba(245, 240, 232, 0.45);
+                font-family: "EB Garamond", serif;
+                font-size: 0.78rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: color 0.2s, border-color 0.2s;
+            }
+            .cta-btn-tertiary:hover {
+                color: rgba(245, 240, 232, 0.75);
+                border-bottom-color: rgba(245, 240, 232, 0.3);
             }
 
             /* ── FOOTER ── */
@@ -690,6 +735,7 @@
         <div class="attendance-banner">
             <p>Free &amp; open to all.</p>
             <a href="https://tally.so/r/MeA0PE" target="_blank" class="attendance-banner-btn">Please RSVP</a>
+            <a href="https://tally.so/r/XxBQEd" target="_blank" class="attendance-banner-btn">Contact Us</a>
         </div>
 
         <!-- ABOUT -->
@@ -1021,6 +1067,7 @@
         <section class="schedule-section">
             <div class="section-label">The Day</div>
             <h2>Schedule <em>for June 6th</em></h2>
+            <p class="schedule-note-intro">Please come to whichever events your schedule allows.</p>
             <div class="schedule-grid fade-up">
                 <div class="schedule-item">
                     <p class="schedule-time">11:00 – 11:15</p>
@@ -1075,6 +1122,9 @@
             </p>
             <a href="https://tally.so/r/MeA0PE" target="_blank" class="cta-btn"
                 >Note your attendance</a
+            >
+            <a href="https://tally.so/r/XxBQEd" target="_blank" class="cta-btn-tertiary"
+                >Have a question? Contact us</a
             >
         </section>
 
