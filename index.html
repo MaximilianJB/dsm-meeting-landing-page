@@ -537,6 +537,21 @@
                 color: var(--gold);
                 border-color: var(--gold);
             }
+            .footer-attribution {
+                width: 100%;
+                border-top: 1px solid var(--rule);
+                padding: 2rem 3rem;
+                text-align: center;
+                font-family: "EB Garamond", serif;
+                font-size: 0.9rem;
+                color: var(--mid);
+                letter-spacing: 0.02em;
+                line-height: 1.65;
+            }
+            .footer-attribution p {
+                max-width: 70ch;
+                margin: 0 auto;
+            }
 
             /* ── PANELS & SPEAKERS ── */
             .panels-section {
@@ -1127,6 +1142,11 @@
                 >Have a question? Contact us</a
             >
         </section>
+
+        <!-- FOOTER ATTRIBUTION -->
+        <footer class="footer-attribution">
+            <p>The Des Moines Meeting is an initiative of the Des Moines community of <a href="https://us.clonline.org/en" target="_blank" rel="noopener">Communion and Liberation</a>, a Vatican-recognized association of the faithful, which gratefully thanks the <a href="https://www.dmdiocese.org/" target="_blank" rel="noopener">Diocese of Des Moines</a> for its support and collaboration.</p>
+        </footer>
 
         <script>
             const observer = new IntersectionObserver(
