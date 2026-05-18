@@ -72,68 +72,147 @@
                 color: var(--gold);
             }
 
-            /* ── ATTENDANCE BANNER ── */
-            .attendance-banner {
-                background: var(--ivory);
-                border-bottom: 1px solid var(--rule);
-                padding: 0.65rem 3rem;
+            /* ── MASTHEAD RSVP PILL ── */
+            .masthead-right {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                gap: 1.25rem;
-                flex-wrap: wrap;
+                gap: 1.5rem;
             }
-            .attendance-banner p {
+            .masthead-rsvp {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.4rem 0.9rem 0.4rem 1rem;
+                background: var(--black);
+                color: var(--ivory);
                 font-family: "EB Garamond", serif;
-                font-size: 0.92rem;
+                font-size: 0.72rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: background 0.2s, color 0.2s;
+            }
+            .masthead-rsvp::after {
+                content: "→";
+                font-size: 0.85rem;
+                transition: transform 0.2s;
+            }
+            .masthead-rsvp:hover {
+                background: var(--gold);
+                color: var(--black);
+            }
+            .masthead-rsvp:hover::after {
+                transform: translateX(2px);
+            }
+
+            /* ── ATTENDANCE SECTION ── */
+            .attendance-section {
+                background: var(--ivory);
+                padding: 4.5rem 3rem;
+                border-bottom: 1px solid var(--rule);
+            }
+            .attendance-inner {
+                max-width: 1100px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .attendance-headline {
+                font-family: "Playfair Display", serif;
+                font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+                font-weight: 700;
+                line-height: 1.05;
+                letter-spacing: -0.015em;
+                color: var(--black);
+                margin: 0 0 0.85rem;
+            }
+            .attendance-headline em {
+                font-style: italic;
+                font-weight: 400;
+                color: var(--gold);
+            }
+            .attendance-lede {
+                font-family: "Cormorant Garamond", serif;
+                font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+                font-style: italic;
+                font-weight: 300;
                 color: var(--mid);
+                margin: 0 auto 2.75rem;
             }
-            .attendance-banner p strong {
-                color: var(--black);
-                font-weight: 500;
+            .attendance-grid {
+                display: grid;
+                grid-template-columns: 1.6fr 1fr;
+                gap: 3rem;
+                align-items: center;
+                text-align: left;
+                padding-top: 2.5rem;
+                border-top: 1px solid var(--rule);
             }
-            .attendance-banner-btn {
-                display: inline-block;
-                padding: 0.35rem 1.1rem;
-                border: 1px solid var(--gold);
-                color: var(--gold);
+            .attendance-note {
                 font-family: "EB Garamond", serif;
-                font-size: 0.78rem;
-                letter-spacing: 0.14em;
+                font-size: 1.05rem;
+                line-height: 1.75;
+                color: var(--black);
+                max-width: 58ch;
+                margin: 0;
+            }
+            .attendance-action {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .attendance-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.8rem;
+                padding: 0.9rem 1.6rem;
+                background: var(--black);
+                color: var(--ivory);
+                font-family: "EB Garamond", serif;
+                font-size: 0.82rem;
+                letter-spacing: 0.2em;
                 text-transform: uppercase;
                 text-decoration: none;
-                white-space: nowrap;
                 transition: background 0.2s, color 0.2s;
             }
-            .attendance-banner-btn:hover {
+            .attendance-cta:hover {
                 background: var(--gold);
                 color: var(--black);
             }
-            .masthead-contact-btn {
-                display: inline-block;
-                padding: 0.35rem 1.1rem;
-                border: 1px solid var(--gold);
-                color: var(--gold);
-                font-family: "EB Garamond", serif;
-                font-size: 0.78rem;
-                letter-spacing: 0.14em;
-                text-transform: uppercase;
-                text-decoration: none;
-                white-space: nowrap;
-                transition: background 0.2s, color 0.2s;
+            .attendance-cta-arrow {
+                transition: transform 0.2s;
             }
-            .masthead-contact-btn:hover {
-                background: var(--gold);
-                color: var(--black);
+            .attendance-cta:hover .attendance-cta-arrow {
+                transform: translateX(3px);
+            }
+            .attendance-contact {
+                font-family: "EB Garamond", serif;
+                font-size: 0.85rem;
+                color: var(--mid);
+                text-decoration: none;
+                border-bottom: 1px solid var(--rule);
+                padding-bottom: 2px;
+                transition: color 0.2s, border-color 0.2s;
+            }
+            .attendance-contact:hover {
+                color: var(--gold);
+                border-bottom-color: var(--gold);
             }
             @media (max-width: 768px) {
-                .attendance-banner {
-                    padding: 0.65rem 1.5rem;
-                    text-align: center;
+                .attendance-section {
+                    padding: 3rem 1.5rem;
                 }
-                .attendance-banner p {
-                    width: 100%;
-                    text-align: center;
+                .attendance-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.75rem;
+                    padding-top: 2rem;
+                }
+                .masthead-rsvp {
+                    font-size: 0.65rem;
+                    padding: 0.35rem 0.7rem 0.35rem 0.8rem;
+                }
+                .masthead-right {
+                    gap: 0.8rem;
                 }
             }
 
@@ -694,7 +773,10 @@
         <!-- MASTHEAD -->
         <header class="masthead">
             <span class="masthead-label">The Des Moines Meeting</span>
-            <span class="masthead-date">June 6, 2026 — Des Moines, Iowa</span>
+            <div class="masthead-right">
+                <span class="masthead-date">June 6, 2026 — Des Moines, Iowa</span>
+                <a href="#attendance" class="masthead-rsvp">RSVP</a>
+            </div>
         </header>
 
         <!-- HERO -->
@@ -746,12 +828,32 @@
             </div>
         </div>
 
-        <!-- ATTENDANCE BANNER -->
-        <div class="attendance-banner">
-            <p>Free &amp; open to all.</p>
-            <a href="https://tally.so/r/MeA0PE" target="_blank" class="attendance-banner-btn">Please RSVP</a>
-            <a href="https://tally.so/r/XxBQEd" target="_blank" class="attendance-banner-btn">Contact Us</a>
-        </div>
+        <!-- ATTENDANCE -->
+        <section class="attendance-section" id="attendance">
+            <div class="attendance-inner">
+                <h2 class="attendance-headline">
+                    Free, and open <em>to all.</em>
+                </h2>
+
+                <p class="attendance-lede">
+                    No ticket. No fee. Bring a friend.
+                </p>
+
+                <div class="attendance-grid fade-up">
+                    <p class="attendance-note">Interest in the Des Moines Meeting is growing and we are conscious that space is limited. If you're planning to come, an RSVP helps us hold a seat for you, and lets us know if we're getting close to capacity. It takes thirty seconds, and you're not signing up for anything long term.</p>
+
+                    <div class="attendance-action">
+                        <a href="https://tally.so/r/MeA0PE" target="_blank" rel="noopener" class="attendance-cta">
+                            <span>RSVP</span>
+                            <span class="attendance-cta-arrow">&rarr;</span>
+                        </a>
+                        <a href="https://tally.so/r/XxBQEd" target="_blank" rel="noopener" class="attendance-contact">
+                            Have a question? Contact us &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ABOUT -->
         <section>
