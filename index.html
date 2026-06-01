@@ -72,6 +72,24 @@
                 color: var(--gold);
             }
 
+            /* ── MASTHEAD NAV ── */
+            .masthead-nav {
+                display: flex;
+                gap: 1.75rem;
+            }
+            .masthead-nav a {
+                font-family: "EB Garamond", serif;
+                font-size: 0.78rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--mid);
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+            .masthead-nav a:hover {
+                color: var(--gold);
+            }
+
             /* ── MASTHEAD RSVP PILL ── */
             .masthead-right {
                 display: flex;
@@ -720,6 +738,96 @@
                 line-height: 1.6;
             }
 
+            /* ── DAY OF ── */
+            .dayof-section {
+                background: var(--warm-white);
+            }
+            .dayof-intro {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.3rem;
+                font-style: italic;
+                color: var(--mid);
+                max-width: 60ch;
+                line-height: 1.7;
+                margin-top: -1rem;
+                margin-bottom: 3rem;
+            }
+            .dayof-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                border: 1px solid var(--rule);
+            }
+            .dayof-column {
+                padding: 2.5rem 2.25rem;
+            }
+            .dayof-column + .dayof-column {
+                border-left: 1px solid var(--rule);
+            }
+            .dayof-column-title {
+                font-family: "Playfair Display", serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            .dayof-column-title em {
+                font-style: italic;
+                color: var(--gold);
+                font-weight: 400;
+            }
+            .dayof-column-note {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.05rem;
+                font-style: italic;
+                color: var(--mid);
+                line-height: 1.6;
+                margin-bottom: 1.75rem;
+                max-width: 38ch;
+            }
+            .dayof-item {
+                padding: 1.25rem 0;
+                border-top: 1px solid var(--rule);
+            }
+            .dayof-item:first-of-type {
+                border-top: none;
+                padding-top: 0.25rem;
+            }
+            .dayof-name {
+                font-family: "Playfair Display", serif;
+                font-size: 1.05rem;
+                font-weight: 700;
+                margin-bottom: 0.35rem;
+            }
+            .dayof-address {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                font-family: "EB Garamond", serif;
+                font-size: 0.95rem;
+                color: var(--mid);
+                text-decoration: none;
+                border-bottom: 1px solid var(--rule);
+                padding-bottom: 1px;
+                transition: color 0.2s, border-color 0.2s;
+            }
+            .dayof-address::after {
+                content: "↗";
+                font-size: 0.85em;
+            }
+            .dayof-address:hover {
+                color: var(--gold);
+                border-bottom-color: var(--gold);
+            }
+            .dayof-meta {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 0.98rem;
+                font-style: italic;
+                color: var(--mid);
+                line-height: 1.5;
+                margin-top: 0.45rem;
+            }
+
             /* ── ANIMATIONS ── */
             .fade-up {
                 opacity: 0;
@@ -766,6 +874,33 @@
                     gap: 1rem;
                     text-align: center;
                 }
+                .masthead {
+                    flex-wrap: wrap;
+                    padding: 0.75rem 1.25rem;
+                }
+                .masthead-date {
+                    display: none;
+                }
+                .masthead-nav {
+                    order: 3;
+                    flex-basis: 100%;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    padding-top: 0.65rem;
+                    margin-top: 0.65rem;
+                    border-top: 1px solid var(--rule);
+                }
+                .masthead-nav a {
+                    font-size: 0.66rem;
+                    letter-spacing: 0.14em;
+                }
+                .dayof-grid {
+                    grid-template-columns: 1fr;
+                }
+                .dayof-column + .dayof-column {
+                    border-left: none;
+                    border-top: 1px solid var(--rule);
+                }
             }
         </style>
     </head>
@@ -773,6 +908,11 @@
         <!-- MASTHEAD -->
         <header class="masthead">
             <span class="masthead-label">The Des Moines Meeting</span>
+            <nav class="masthead-nav">
+                <a href="#panels">Speakers</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#day-of">Day Of</a>
+            </nav>
             <div class="masthead-right">
                 <span class="masthead-date">June 6, 2026 — Des Moines, Iowa</span>
                 <a href="#attendance" class="masthead-rsvp">RSVP</a>
@@ -1182,7 +1322,7 @@
         </section>
 
         <!-- SCHEDULE -->
-        <section class="schedule-section">
+        <section class="schedule-section" id="schedule">
             <div class="section-label">The Day</div>
             <h2>Schedule <em>for June 6th</em></h2>
             <p class="schedule-note-intro">Please come to whichever events your schedule allows.</p>
@@ -1226,6 +1366,66 @@
                     <p class="schedule-time">7:00 – 8:00</p>
                     <p class="schedule-title">Piano Concert</p>
                     <p class="schedule-note">At the Cathedral</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DAY OF -->
+        <section class="dayof-section" id="day-of">
+            <div class="section-label">Day Of</div>
+            <h2>Parking <em>&amp; Dinner</em></h2>
+            <p class="dayof-intro">Practical notes for the day. The venue is at 601 Grand Avenue; everything below is a short walk away. Tap an address to open it in Maps.</p>
+
+            <div class="dayof-grid fade-up">
+                <div class="dayof-column">
+                    <h3 class="dayof-column-title">Where to <em>park</em></h3>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">4th &amp; Grand Garage</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=400+Grand+Avenue+Des+Moines+IA" target="_blank" rel="noopener">400 Grand Avenue</a>
+                        <p class="dayof-meta">Two blocks west of the venue — about a 3-minute walk.</p>
+                    </div>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">5th &amp; Keo Ramp</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=525+5th+Avenue+Des+Moines+IA" target="_blank" rel="noopener">525 5th Avenue</a>
+                        <p class="dayof-meta">A short walk south of the venue — about 5 minutes on foot.</p>
+                    </div>
+                </div>
+
+                <div class="dayof-column">
+                    <h3 class="dayof-column-title">Where to <em>eat</em></h3>
+                    <p class="dayof-column-note">A handful of nearby options for the dinner break (5:00 – 7:00). Reservations are on you; downtown can fill up on a Saturday.</p>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">Tupelo Honey</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=665+Grand+Avenue+Des+Moines+IA" target="_blank" rel="noopener">665 Grand Avenue</a>
+                        <p class="dayof-meta">Southern kitchen, essentially next door.</p>
+                    </div>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">Mash + MARROW</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=700+Grand+Avenue+Des+Moines+IA" target="_blank" rel="noopener">700 Grand Avenue</a>
+                        <p class="dayof-meta">Inside the Des Moines Marriott Downtown, one block east.</p>
+                    </div>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">Revelry Room Bar + Kitchen</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=401+Locust+Street+Des+Moines+IA" target="_blank" rel="noopener">401 Locust Street</a>
+                        <p class="dayof-meta">Inside the Renaissance Des Moines Savery Hotel.</p>
+                    </div>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">Buzzard Billy's</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=615+3rd+Street+Des+Moines+IA" target="_blank" rel="noopener">615 3rd Street</a>
+                        <p class="dayof-meta">Cajun &amp; Creole in the Court Avenue district.</p>
+                    </div>
+
+                    <div class="dayof-item">
+                        <p class="dayof-name">Park Street Kitchen</p>
+                        <a class="dayof-address" href="https://www.google.com/maps/search/?api=1&amp;query=435+Park+Street+Des+Moines+IA" target="_blank" rel="noopener">435 Park Street</a>
+                        <p class="dayof-meta">A slightly longer walk south of downtown.</p>
+                    </div>
                 </div>
             </div>
         </section>
